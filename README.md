@@ -66,3 +66,15 @@ You can verify that Zookeeper and Kafka are running by using the following comma
 
 
 *** https://github.com/PacktPublishing/Apache-Kafka-Series---Learn-Apache-Kafka-for-Beginners-v3/tree/master/kafka-for-beginners-code-20230404/code
+
+
+### Visualization
+https://conduktor.io/get-started
+
+
+Run 
+```curl -L https://releases.conduktor.io/quick-start -o docker-compose.yml && docker compose up -d --wait && echo "Conduktor started on http://localhost:8080"```
+
+
+Visit 
+```http://localhost:8080/console/cdk-gateway/home```
