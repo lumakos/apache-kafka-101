@@ -62,3 +62,7 @@ You can verify that Zookeeper and Kafka are running by using the following comma
     ```
 
 ### Also check the rest of commands from Repository to run Producers, Consumers etc
+
+
+
+*** https://github.com/PacktPublishing/Apache-Kafka-Series---Learn-Apache-Kafka-for-Beginners-v3/tree/master/kafka-for-beginners-code-20230404/code
