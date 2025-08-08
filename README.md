@@ -1,24 +1,61 @@
 # apache-kafka-101
 
-Install ApacheKafka in Linux
+This guide provides instructions for installing and running Apache Kafka on a Linux system.
 
-1. wget https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz
-2. tar -xzf kafka_2.13-3.8.0.tgz
-3. sudo mv kafka_2.13-3.8.0 /opt/kafka
-4. nano ~/.bashrc
-5. Add the PATH "export PATH="/opt/kafka/bin:$PATH"
-6. source ~/.bashrc
+### Installation
 
+1.  **Download Kafka:**
+    ```sh
+    wget [https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz](https://downloads.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz)
+    ```
+2.  **Extract the archive:**
+    ```sh
+    tar -xzf kafka_2.13-3.8.0.tgz
+    ```
+3.  **Move Kafka to the `/opt` directory:**
+    ```sh
+    sudo mv kafka_2.13-3.8.0 /opt/kafka
+    ```
+4.  **Set the PATH:**
+    Open your `~/.bashrc` file.
+    ```sh
+    nano ~/.bashrc
+    ```
+5.  Add the following line to the end of the file to include Kafka's `bin` directory in your system's PATH.
+    ```sh
+    export PATH="/opt/kafka/bin:$PATH"
+    ```
+6.  **Apply the changes:**
+    ```sh
+    source ~/.bashrc
+    ```
 
-## Start Zookeeper and Kafka
-terminal 1 
-zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+---
 
-terminal 2 
-kafka-server-start.sh /opt/kafka/config/server.properties
+### Start Zookeeper and Kafka
 
-### Zookeeper Status
-ps aux | grep zookeeper
+Apache Kafka requires Zookeeper to run. You will need to open two separate terminal windows for this process.
 
-### Kafka Status
-ps aux | grep kafka
+* **Terminal 1 (Start Zookeeper):**
+    ```sh
+    zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties
+    ```
+* **Terminal 2 (Start Kafka):**
+    ```sh
+    kafka-server-start.sh /opt/kafka/config/server.properties
+    ```
+
+---
+
+### Status Checks
+
+You can verify that Zookeeper and Kafka are running by using the following commands:
+
+* **Zookeeper Status:**
+    ```sh
+    ps aux | grep zookeeper
+    ```
+* **Kafka Status:**
+    ```sh
+    ps aux | grep kafka
+    ```
