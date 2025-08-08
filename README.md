@@ -1,6 +1,7 @@
 # apache-kafka-101
 
 This guide provides instructions for installing and running Apache Kafka on a Linux system.
+Udemy course: https://www.udemy.com/course/apache-kafka/?couponCode=PMNVD3025
 
 ### Installation
 
@@ -59,3 +60,5 @@ You can verify that Zookeeper and Kafka are running by using the following comma
     ```sh
     ps aux | grep kafka
     ```
+
+### Also check the rest of commands from Repository to run Producers, Consumers etc
